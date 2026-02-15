@@ -6,5 +6,4 @@ print(fungsi(3))
 def layang(d1,d2):
     hasil = 1/2*d1*d2
     return(hasil)
-
 print(layang(5,10))
