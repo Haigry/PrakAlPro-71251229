@@ -16,15 +16,11 @@ for i in range(1, n + 1):
     b = int(belah[1])
     games.append((a, b))
 
-# Aturan: Kaki (H) menang vs Gunting (S)
-#         Gunting (S) menang vs Kertas (P)
-#         Kertas (P) menang vs Kaki (H)
 beats = {'H': 'S', 'S': 'P', 'P': 'H'}
 moves = ['H', 'P', 'S']
 
 max_menang = 0
 
-# Coba semua 6 kemungkinan pemetaan angka -> gerakan
 for perm in permutations(moves):
     mapping = {1: perm[0], 2: perm[1], 3: perm[2]}
     menang = 0
