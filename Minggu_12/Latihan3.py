@@ -1,7 +1,4 @@
 # Latihan 11.3
-# Buatlah program untuk menghitung distribusi jam dalam satu hari dimana ada
-# pesan yang diterima dari setiap email yang masuk. Gunakan file mbox-short.txt
-# untuk sebagai datanya.
 
 def hitung_distribusi_jam(nama_file):
     try:
@@ -15,16 +12,14 @@ def hitung_distribusi_jam(nama_file):
         if not line.startswith('From '):
             continue
         words = line.split()
-        # Format: From email weekday month day HH:MM:SS year
         if len(words) < 6:
             continue
-        waktu = words[5]          # contoh: '09:14:16'
-        jam = waktu.split(':')[0]  # ambil bagian jam saja
+        waktu = words[5]
+        jam = waktu.split(':')[0]
         jam_counts[jam] = jam_counts.get(jam, 0) + 1
 
     fhand.close()
 
-    # Urutkan berdasarkan jam (sebagai list of tuples)
     lst = sorted(jam_counts.items())
 
     for jam, jumlah in lst:

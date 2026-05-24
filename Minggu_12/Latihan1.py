@@ -1,6 +1,4 @@
 # Latihan 11.1
-# Buatlah program untuk melakukan pengecekan apakah semua anggota yang ada
-# didalam tuple sama.
 
 def cek_semua_sama(t):
     return len(set(t)) == 1
